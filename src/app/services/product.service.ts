@@ -5,13 +5,13 @@ import { Product } from '../models/product'
 @Injectable()
 export class ProductService {
   productList: AngularFireList<any>;
-  // escoger product específico, comienza en blanco y luego almacena momentáneamente el producto seleccionado
-  selectProduct: Product = new Product();
+  // escoger product específico, comienza en blanco y luego almacena temporalmente el producto seleccionado
+  selectedProduct: Product = new Product();
 
  
   constructor(private firebase: AngularFireDatabase) { }
 
-  getProdutc() {
+  getProducts() {
     return this.productList = this.firebase.list('products');
   }
 
